@@ -1,0 +1,53 @@
+.menu-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Agar gambar tidak keluar dari sudut rounded */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px; /* Lebar kartu */
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Memastikan gambar terisi penuh tanpa distorsi */
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #007bff;
+  margin: 0 0 1rem 0;
+}
+
+.card-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745; /* Warna hijau */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #218838;
+}
