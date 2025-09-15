@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './MenuPage.css';
 import MenuCard from '../components/MenuCard';
 // Pastikan file ini sudah ada dan mengekspor fungsi fetchMenus
 import { fetchMenus } from '../services/menuService'; 
@@ -28,7 +29,7 @@ const MenuPage = () => {
 
   return (
     <div className="menu-container">
-      <h1>Daftar Menu</h1>
+      <h1>DAFTAR MENU</h1>
       <div className="menu-grid">
         {menus.length > 0 ? (
           menus.map((menu) => (

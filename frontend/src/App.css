@@ -42,11 +42,13 @@
 }
 
 /* Tambahkan ini di App.css atau index.css jika belum ada */
+
+
+
 .menu-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem; /* Jarak antar kartu */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Baris ini yang membuat 4 kolom */
+  gap: 2rem;
   padding: 2rem;
 }
 

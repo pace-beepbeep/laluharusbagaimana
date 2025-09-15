@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom'; // Ganti Link menjadi NavLink
 import AuthContext from '../context/AuthContext.jsx';
-import './Navbar.css'; // File styling yang akan kita buat
+import './Navbar.css';
 
 const Navbar = () => {
   const { user, logoutAction } = useContext(AuthContext);
@@ -9,20 +9,20 @@ const Navbar = () => {
 
   const handleLogout = () => {
     logoutAction();
-    navigate('/login'); // Arahkan ke halaman login setelah logout
+    navigate('/login');
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/">Cafe Echo</Link>
+        <NavLink to="/">Cafe Echo</NavLink>
       </div>
       <ul className="navbar-links">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
         </li>
         <li>
-          <Link to="/menu">Menu</Link>
+          <NavLink to="/menu" className={({ isActive }) => isActive ? 'active' : ''}>Menu</NavLink>
         </li>
       </ul>
       <div className="navbar-auth">
@@ -34,9 +34,9 @@ const Navbar = () => {
             </button>
           </>
         ) : (
-          <Link to="/login" className="login-button">
+          <NavLink to="/login" className="login-button">
             Login
-          </Link>
+          </NavLink>
         )}
       </div>
     </nav>

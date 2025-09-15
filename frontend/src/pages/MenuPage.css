@@ -1,0 +1,12 @@
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Baris ini yang membuat 4 kolom */
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+h1{
+    text-align: center;
+    color: gold;
+}
